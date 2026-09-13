@@ -23,12 +23,7 @@ export function generateId(prefix: string): string {
   return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
-/**
- * Determine a reading's status from its power and occupancy, given the
- * current settings from the Settings tab. This is intentionally simple and
- * rule-based (not a trained model) - see the "AI Insights" tab for the
- * clearly-labelled prototype ML prediction section.
- */
+
 export function computeStatus(
   power: number,
   occupancy: number,
